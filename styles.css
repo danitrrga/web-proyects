@@ -143,6 +143,9 @@ textarea {
     border-radius: 4px;
     border: 2px solid #B2B2B2;
 }
+textarea::placeholder {
+    font-family: 'Inter', sans-serif;
+}
 
 #btn-container{
     display: flex;
