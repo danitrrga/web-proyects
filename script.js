@@ -72,7 +72,7 @@ function editNote(noteId) {
         <h1>Edit Note</h1>
         <textarea id="note-text">${noteText}</textarea>
         <div id="btn-container">
-            <button id="submitBtn" onclick="updateNote()"><img src="SVG/check_ring_round.svg"></button>
+            <button id="submitBtn" onclick="updateNote()"><img src="SVG/Check.svg"></button>
             <button id="closeBtn" onclick="closeEditPopup()"><img src="SVG/Close_round.svg"></button>
         </div>
     </div>
