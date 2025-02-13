@@ -5,7 +5,7 @@ function popup() {
         <h1>New Note</h1>
         <textarea id="note-text" placeholder="Write here..." autofocus type="text"></textarea>
         <div id="btn-container">
-            <button id="submitBtn" onclick="createNote()"><img src="SVG/check_ring_round.svg"></button>
+            <button id="submitBtn" onclick="createNote()"><img src="SVG/Check.svg"></button>
             <button id="closeBtn" onclick="closePopup()"><img src="SVG/Close_round.svg"></button>            
         </div>
     </div>
