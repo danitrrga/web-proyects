@@ -8,12 +8,15 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+div::-webkit-scrollbar {
+    display: none; 
+}
 #container {
     background-color: #2B2B2B;
     border-radius: 8px;
     box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    width: 827px;
+    width: 75vh;
     height: 600px;
     padding: 20px;
     box-sizing: border-box;
@@ -32,7 +35,6 @@ body {
 
 #addNoteDiv{
     background-color: #B2B2B2;
-    border: 2px solid #000000;
     padding: 20px;
     border-radius: 8px;
     height: 30px;
@@ -44,16 +46,21 @@ body {
     align-items: center;
     text-align: center;
 }
+#note-text {
+    background-color: rgba(122, 122, 122, 0.2);
+    border: 1px solid #2b2b2b;
+    border-radius: 8px;
+}
 #addNoteDiv:hover {
-    transition: 0.25s;
-    background-color: rgb(128, 128, 128); 
+    transition: 0.5s;
+    background-color: rgb(128, 128, 128);
 }
 #addNoteDiv i {
     font-size: 70px;
     color: gainsboro;
 }
 .notes-list{
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 20%; /* Adjust the value as needed */
 }
 /* List CSS */
 #list-container {
@@ -62,13 +69,14 @@ body {
     justify-content: left;
 }
 ul {
- list-style-type: none;
- padding: 0;
- margin: 0;
- display: flex;
- flex-wrap: wrap;
- text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
+
 li {
     background-color: #B2B2B2;
     margin: 5px 0;
@@ -83,17 +91,29 @@ li {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px 2px rgba(122, 122, 122, 0.6);
+    overflow: hidden; /* Hide scrollbar by default */
 }
-li span{
+
+li span {
     font-size: 12px;
     flex-grow: 1;
     word-wrap: break-word;
     overflow-y: scroll;
 }
 
+/* Hide scrollbar by default */
+li span::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+li span {
+    scrollbar-width: none; /* Firefox */
+}
+
 #editBtn,
 #deleteBtn {
-    background-color: #2B2B2B;
+    background-color: #b2b2b2;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -104,16 +124,14 @@ li span{
     width: 60px;
 }
 #editBtn {
-    background-color: #2B2B2B;
+    background-color: #b2b2b2;
     transition: 0.5s, background-color 0.5s;
 }
 
-#deleteBtn:hover {
+#deleteBtn:hover, #editBtn:hover {
     background-color: rgb(128, 128, 128);
 }
-#editBtn:hover {
-    background-color: rgb(128, 128, 128);
-}
+
 /* Create Note Popup CSS*/
 #popupContainer {
     position: absolute;
@@ -122,7 +140,7 @@ li span{
     transform: translate(-50%, -50%);
     width: 400px;
     height: 300px;
-    background-color: white;
+    background-color: #B2B2B2;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -153,8 +171,7 @@ textarea::placeholder {
 
 #submitBtn, #closeBtn {
     width: 100px;
-    background-color: #B2B2B2;
-    color: #fff;
+    background-color: #b2b2b2;
     font-size: 14px;
     border: none;
     border-radius: 5px;
@@ -162,11 +179,10 @@ textarea::placeholder {
     cursor: pointer;
     margin: 10px;
 }
-
-#closeBtn {
-    background-color: gainsboro;
-}
-    
+#submitBtn:hover, #closeBtn:hover {
+    background-color: rgb(128, 128, 128);
+    transition: 0.5s, background-color 0.5s;
+}      
 #editing-container {
     position: absolute;
     top: 50%;
@@ -174,7 +190,7 @@ textarea::placeholder {
     transform: translate(-50%, -50%);
     width: 400px;
     height: 300px;
-    background-color: white;
+    background-color: #b2b2b2;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -186,9 +202,8 @@ textarea::placeholder {
     justify-content: center;
 }
 #submitBtn, #closeBtn {
+
     width: 100px;
-    background-color: #2B2B2B;
-    color: #fff;
     font-size: 14px;
     border: none;
     border-radius: 5px;
@@ -196,3 +211,4 @@ textarea::placeholder {
     cursor: pointer;
     margin: 10px;
 }
+
