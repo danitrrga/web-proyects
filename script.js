@@ -5,8 +5,8 @@ function popup() {
         <h1>New Note</h1>
         <textarea id="note-text" placeholder="Write here..." autofocus type="text"></textarea>
         <div id="btn-container">
-            <button id="submitBtn" onclick="createNote()"><img src="SVG/Check.svg"></button>
-            <button id="closeBtn" onclick="closePopup()"><img src="SVG/Close_round.svg"></button>            
+            <button id="submitBtn" onclick="createNote()"><img src="/SVG/Check.svg" alt="Check"></button>
+            <button id="closeBtn" onclick="closePopup()"><img src="/SVG/Close_round.svg" alt="Close"></button>            
         </div>
     </div>
     `;
@@ -53,8 +53,8 @@ function displayNotes() {
         listItem.innerHTML = `
         <span>${note.text}</span>
         <div id="noteBtns-container">
-            <button id="editBtn" onclick="editNote(${note.id})"><img src="SVG/Edit.svg"></button>
-            <button id="deleteBtn" onclick="deleteNote(${note.id})"><img src="SVG/Trash.svg"></button>
+            <button id="editBtn" onclick="editNote(${note.id})"><img src="/SVG/Edit.svg"></button>
+            <button id="deleteBtn" onclick="deleteNote(${note.id})"><img src="/SVG/Trash.svg"></button>
         </div>
         `;
         notesList.appendChild(listItem);
@@ -72,8 +72,8 @@ function editNote(noteId) {
         <h1>Edit Note</h1>
         <textarea id="note-text">${noteText}</textarea>
         <div id="btn-container">
-            <button id="submitBtn" onclick="updateNote()"><img src="SVG/Check.svg"></button>
-            <button id="closeBtn" onclick="closeEditPopup()"><img src="SVG/Close_round.svg"></button>
+            <button id="submitBtn" onclick="updateNote()"><img src="/SVG/Check.svg" alt="Submit"></button>
+            <button id="closeBtn" onclick="closeEditPopup()"><img src="/SVG/Close_round.svg" alt="Close"></button>
         </div>
     </div>
     `;
