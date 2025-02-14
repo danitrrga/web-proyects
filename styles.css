@@ -1,0 +1,207 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: gainsboro;
+    margin: 0;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+div::-webkit-scrollbar {
+    display: none; 
+}
+#container {
+    background-color: #2B2B2B;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 75vh;
+    height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+#list-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: semi-bold;
+}
+
+#addNoteDiv{
+    background-color: #B2B2B2;
+    padding: 20px;
+    border-radius: 8px;
+    height: 30px;
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#note-text {
+    background-color: rgba(122, 122, 122, 0.2);
+    border: 1px solid #2b2b2b;
+    border-radius: 8px;
+}
+#addNoteDiv:hover {
+    transition: 0.5s;
+    background-color: rgb(128, 128, 128);
+}
+#addNoteDiv i {
+    font-size: 70px;
+    color: gainsboro;
+}
+.notes-list{
+    margin-top: 20%; /* Adjust the value as needed */
+}
+/* List CSS */
+#list-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+li {
+    background-color: #B2B2B2;
+    margin: 5px 0;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 2px rgba(122, 122, 122, 0.6);
+    overflow: hidden; /* Hide scrollbar by default */
+}
+
+li span {
+    font-size: 12px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-y: auto;
+    max-height: 100%; /* Ensures it doesn’t overflow */
+    display: block;
+    text-align: left; /* Aligns text properly */
+    padding: 5px; /* Adds spacing inside the note */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar by default */
+li span::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+#editBtn,
+#deleteBtn {
+    background-color: #b2b2b2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+    transition: 0.5s, background-color 0.5s;
+}
+
+#deleteBtn:hover, #editBtn:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+/* Create Note Popup CSS*/
+#popupContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: #B2B2B2;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #B2B2B2;
+}
+textarea::placeholder {
+    font-family: 'Inter', sans-serif;
+}
+
+#btn-container{
+    display: flex;
+}
+
+#submitBtn, #closeBtn {
+    width: 100px;
+    background-color: #b2b2b2;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+#submitBtn:hover, #closeBtn:hover {
+    background-color: rgb(128, 128, 128);
+    transition: 0.5s, background-color 0.5s;
+}      
+#editing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: #b2b2b2;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+ /*To prevent the user from draging the SVGs*/
+#submitBtn, #closeBtn, #addNoteDiv, #btn-container, #noteBtns-container {
+    user-select: none;
+}
